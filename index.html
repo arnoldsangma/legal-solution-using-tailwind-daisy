@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Legal Solution</title>
+      <!--** tailwind custom classes **--> 
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                "primary-btn": "#B68C5A",
+              }
+            }
+          }
+        }
+      </script>
+      <!-- **Shared Styles** -->
+      <style>
+        .tile-garamond {
+          font-family: "EB Garamond", serif;
+        }
+        .desc-poppins {
+          font-family: "Poppins", sans-serif;
+        }
+      </style>
+
     <!-- ***google fonts EB Garamond and poppins*** -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,15 +34,6 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <!-- **Shared Styles** -->
-    <style>
-      .tile-garamond {
-        font-family: "EB Garamond", serif;
-      }
-      .desc-poppins {
-        font-family: "Poppins", sans-serif;
-      }
-    </style>
     <!-- **Tailwind css and Daisy UI cdn** -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
@@ -27,17 +41,54 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-
+     <!--** font awesome cdn **-->
+     <script src="https://kit.fontawesome.com/5122a2bb74.js" crossorigin="anonymous"></script>
+    
   </head>
+
   <body>
     <header>
+      <!-- navbar -->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <ul class="p-2">
+                  <li><a>Home</a></li>
+                  <li><a>Services</a></li>
+                  <li><a>Cases</a></li>
+                  <li><a>Blog</a></li>
+                  <li><a>Contact Us</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a>Services <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a>Cases <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a>Blog <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a>Contact Us <i class="fa-solid fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn bg-[#B68C5A] text-white">Free Consultation</a>
+        </div>
+      </div>
       
     </header>
     <main>
-      
+
     </main>
     <footer>
-      
+
     </footer>
   </body>
 </html>
