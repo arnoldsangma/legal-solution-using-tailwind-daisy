@@ -4,91 +4,592 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Legal Solution</title>
-      <!--** tailwind custom classes **--> 
-      <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-                "primary-btn": "#B68C5A",
-              }
-            }
-          }
-        }
-      </script>
-      <!-- **Shared Styles** -->
-      <style>
-        .tile-garamond {
-          font-family: "EB Garamond", serif;
-        }
-        .desc-poppins {
-          font-family: "Poppins", sans-serif;
-        }
-      </style>
-
-    <!-- ***google fonts EB Garamond and poppins*** -->
+    <!-- google fonts : EB Garamond + Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <!-- **Tailwind css and Daisy UI cdn** -->
+    <style>
+      .font-garamond {
+        font-family: "EB Garamond", serif;
+      }
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/5122a2bb74.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- tailwind and daisyUI cdn: -->
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-     <!--** font awesome cdn **-->
-     <script src="https://kit.fontawesome.com/5122a2bb74.js" crossorigin="anonymous"></script>
-    
   </head>
-
   <body>
     <header>
-      <!-- navbar -->
-      <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-            </label>
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <!-- nav section -->
+      <section class="max-w-screen-xl mx-auto">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>Services</a></li>
+                <li><a>Cases</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="flex">
+              <img class="" src="images/logo2.png" alt="" />
+            </div>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
               <li>
-                <ul class="p-2">
-                  <li><a>Home</a></li>
-                  <li><a>Services</a></li>
-                  <li><a>Cases</a></li>
-                  <li><a>Blog</a></li>
-                  <li><a>Contact Us</a></li>
-                </ul>
+                <a>Services <i class="fa-solid fa-chevron-right"></i></a>
+              </li>
+              <li>
+                <a>Cases <i class="fa-solid fa-chevron-right"></i></a>
+              </li>
+              <li>
+                <a>Blog <i class="fa-solid fa-chevron-right"></i></a>
+              </li>
+              <li>
+                <a>Contact Us <i class="fa-solid fa-chevron-right"></i></a>
               </li>
             </ul>
           </div>
-          <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <div class="navbar-end">
+            <a class="btn bg-[#B68C5A] text-white text-xl font-semibold px-6"
+              >Free Consultation</a
+            >
+          </div>
         </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Home <i class="fa-solid fa-chevron-right"></i></a></li>
-            <li><a>Services <i class="fa-solid fa-chevron-right"></i></a></li>
-            <li><a>Cases <i class="fa-solid fa-chevron-right"></i></a></li>
-            <li><a>Blog <i class="fa-solid fa-chevron-right"></i></a></li>
-            <li><a>Contact Us <i class="fa-solid fa-chevron-right"></i></a></li>
-          </ul>
+      </section>
+      <!-- Banner section -->
+      <section class="max-w-screen-xl mx-auto">
+        <div>
+          <div
+            class="hero h-[482px] bg-cover bg-center bg-black"
+            style="background-image: url(./images/banner.png)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-xl">
+                <h1
+                  class="mb-5 text-7xl font-extrabold text-font-garamond pb-6"
+                >
+                  Hello there
+                </h1>
+                <p class="mb-5 text-font-poppins font-normal pb-8">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                  assumenda excepturi exercitationem quasi. In deleniti eaque
+                  aut repudiandae et a id nisi.
+                </p>
+                <form action="">
+                  <input
+                    type="search"
+                    placeholder="Search your services"
+                    class="border py-3 px-24 text-black bg-white"
+                  />
+                  <button class="btn bg-[#B68C5A] text-font-poppins py-4">
+                    Get Started
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="navbar-end">
-          <a class="btn bg-[#B68C5A] text-white">Free Consultation</a>
-        </div>
-      </div>
-      
+      </section>
     </header>
     <main>
-
+      <!-- legal practice section -->
+      <section class="max-w-screen-xl mx-auto pt-32">
+        <div>
+          <h2
+            class="text-center text-4xl text-font-garamond font-extrabold pb-6"
+          >
+            The Legal Practice Area
+          </h2>
+          <p class="text-center text-font-poppins text-gray-500">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have <br />
+            suffered alteration in some form, by injected humour.
+          </p>
+        </div>
+        <!-- cards -->
+        <div class="grid lg:grid-cols-3 mt-16">
+          <div>
+            <!-- first-row-cards -->
+            <div>
+              <!-- card-1 -->
+              <div
+                class="w-96 bg-gradient-to-r from-#F3F3F3 to-#F3F3F300 border-b-2 border-r-2 flex flex-col justify-center items-center"
+              >
+                <figure><img src="./images/business.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                  <h2 class="text-center">Business Law</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <button class="text-[#B68C5A]">
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- card-2 -->
+              <div
+                class="w-96 bg-gradient-to-r from-#F3F3F3 to-#F3F3F300 border-b-2 border-r-2 flex flex-col justify-center items-center"
+              >
+                <figure><img src="./images/business.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                  <h2 class="text-center">Business Law</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <button class="text-[#B68C5A]">
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- card-3 -->
+              <div
+                class="w-96 bg-gradient-to-r from-#F3F3F3 to-#F3F3F300 border-r-2 flex flex-col justify-center items-center"
+              >
+                <figure><img src="./images/business.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                  <h2 class="text-center">Business Law</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <button class="text-[#B68C5A]">
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- second-row-cards -->
+            <div>
+              <!-- card-1 -->
+              <div
+                class="w-96 bg-gradient-to-r from-#F3F3F3 to-#F3F3F300 border-b-2 flex flex-col justify-center items-center"
+              >
+                <figure><img src="./images/business.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                  <h2 class="text-center">Business Law</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <button class="text-[#B68C5A]">
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- card-2 -->
+              <div
+                class="w-96 bg-gradient-to-r from-#F3F3F3 to-#F3F3F300 border-b-2 flex flex-col justify-center items-center"
+              >
+                <figure><img src="./images/business.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                  <h2 class="text-center">Business Law</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <button class="text-[#B68C5A]">
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- card-3 -->
+              <div
+                class="w-96 bg-gradient-to-r from-#F3F3F3 to-#F3F3F300 flex flex-col justify-center items-center"
+              >
+                <figure><img src="./images/business.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                  <h2 class="text-center">Business Law</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <button class="text-[#B68C5A]">
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- third-row-cards -->
+            <div>
+              <!-- card-1 -->
+              <div
+                class="w-96 bg-gradient-to-r from-#F3F3F3 to-#F3F3F300 border-b-2 border-l-2 flex flex-col justify-center items-center"
+              >
+                <figure><img src="./images/business.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                  <h2 class="text-center">Business Law</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <button class="text-[#B68C5A]">
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- card-2 -->
+              <div
+                class="w-96 bg-gradient-to-r from-#F3F3F3 to-#F3F3F300 border-b-2 border-l-2 flex flex-col justify-center items-center"
+              >
+                <figure><img src="./images/business.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                  <h2 class="text-center">Business Law</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <button class="text-[#B68C5A]">
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- card-3 -->
+              <div
+                class="w-96 bg-gradient-to-r from-#F3F3F3 to-#F3F3F300 border-l-2 flex flex-col justify-center items-center"
+              >
+                <figure><img src="./images/business.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                  <h2 class="text-center">Business Law</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <button class="text-[#B68C5A]">
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- what our client say -->
+      <section class="max-w-screen-xl mx-auto pt-28">
+        <div class="text-center">
+          <h2 class="text-font-garamond text-4xl font-extrabold">
+            What Our Client Say
+          </h2>
+          <p class="pt-6 text-font-poppins text-gray-500">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have <br />suffered alteration in some form, by
+            injected humour.
+          </p>
+          <div class="max-w-screen-xl mx-auto mt-16 pb-28">
+            <!-- carousel starts -->
+            <div class="carousel max-w-[1170px] h-[500px]">
+              <div id="slide1" class="carousel-item relative w-full">
+                <img src="./images/slider-1.jpg" class="w-full" />
+                <div
+                  class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                >
+                  <a href="#slide3" class="btn btn-circle">❮</a>
+                  <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+                <div
+                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white"
+                >
+                  <h2
+                    class="text-2xl font-extrabold text-font-garamond text-white"
+                  >
+                    Awlad Hossain
+                  </h2>
+                  <h4 class="text-font-poppins text-white pb-8">
+                    UIX Designer
+                  </h4>
+                  <p class="text-font-poppins">
+                    Contrary to popular belief, Lorem Ipsum is not simply random
+                    text. It has roots in a piece of classical Latin literature
+                    from 45 BC, making it over 2000 years old. Richard
+                    McClintock, a Latin professor at Hampden-Sydney College in
+                    Virginia, looked up one of the more obscure Latin words,
+                    consectetur.
+                  </p>
+                </div>
+              </div>
+              <div id="slide2" class="carousel-item relative w-full">
+                <img src="./images/slider-2.jpg" class="w-full" />
+                <div
+                  class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                >
+                  <a href="#slide1" class="btn btn-circle">❮</a>
+                  <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+              </div>
+              <div id="slide3" class="carousel-item relative w-full">
+                <img src="./images/slider-3.jpg" class="w-full" />
+                <div
+                  class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                >
+                  <a href="#slide2" class="btn btn-circle">❮</a>
+                  <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ -->
+      <section class="max-w-screen-xl mx-auto">
+        <div>
+          <h2
+            class="text-4xl font-extrabold text-font-garamond text-center pb-6"
+          >
+            Frequently Asked Any Questions
+          </h2>
+          <p class="text-font-poppins text-gray-500 text-center">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have <br />
+            suffered alteration in some form, by injected humour.
+          </p>
+        </div>
+        <div class="flex flex-row gap-8 items-center pt-16">
+          <div class="flex-1">
+            <!-- accordion -->
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+              <div class="collapse-title text-xl font-medium">
+                Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour .
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour .
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour .
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour .
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <!-- image faq -->
+            <img src="./images/faq.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- contact with us -->
+      <section class="max-w-screen-xl mx-auto pt-32">
+        <div>
+          <h2 class="text-font-garamond text-5xl font-extrabold text-center pb-6">Contact With Us</h2>
+          <p class="text-font-poppins text-center text-gray-500 pb-16">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have <br />
+            suffered alteration in some form, by injected humour.
+          </p>
+          <div class="flex items-center justify-center gap-8 pb-28">
+            <div class=" grid grid-cols-2">
+              <!-- contact cards -->
+              <div class="flex flex-col items-center bg-[#F3F3F3] py-16 max-w-[285px] h-[285px] border-r-2 border-b-2 px-16">
+                <img class="w-10 h-10" src="./images/location.png" alt="" />
+                <h2 class="text-font-garamond text-2xl font-extrabold pb-4">
+                  Address
+                </h2>
+                <p class="text-font-poppins text-gray-500 text-center">
+                  A108 Adam Street,<br />
+                  New York, NY 535022
+                </p>
+              </div>
+              <div class="flex flex-col items-center bg-[#F3F3F3] py-16 max-w-[285px] h-[285px] px-16 border-b-2">
+                <img class="w-10 h-10" src="./images/location.png" alt="" />
+                <h2 class="text-font-garamond text-2xl font-extrabold pb-4">
+                  Address
+                </h2>
+                <p class="text-font-poppins text-gray-500 text-center">
+                  A108 Adam Street,<br />
+                  New York, NY 535022
+                </p>
+              </div>
+              <div class="flex flex-col items-center bg-[#F3F3F3] py-16 max-w-[285px] h-[285px] px-16 border-r-2">
+                <img class="w-10 h-10" src="./images/location.png" alt="" />
+                <h2 class="text-font-garamond text-2xl font-extrabold pb-4">
+                  Address
+                </h2>
+                <p class="text-font-poppins text-gray-500 text-center">
+                  A108 Adam Street,<br />
+                  New York, NY 535022
+                </p>
+              </div>
+              <div class="flex flex-col items-center bg-[#F3F3F3] py-16 max-w-[285px] h-[285px] px-16">
+                <img class="w-10 h-10" src="./images/location.png" alt="" />
+                <h2 class="text-font-garamond text-2xl font-extrabold pb-4">
+                  Address
+                </h2>
+                <p class="text-font-poppins text-gray-500 text-center">
+                  A108 Adam Street,<br />
+                  New York, NY 535022
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-rows-1 gap-7">  <!-- contact with us -form -->
+              <form action="">
+                <input type="text" placeholder="Your Name" class="w-[570px] h-[72px] bg-[#F3F3F3] rounded-lg ">
+              </form>
+              <form action="">
+                <input type="email" placeholder="Your Email" class="w-[570px] h-[72px] bg-[#F3F3F3] rounded-lg ">
+              </form>
+              <form action="">
+                <input type="text" placeholder="Subject" class="w-[570px] h-[72px] bg-[#F3F3F3] rounded-lg ">
+              </form>
+              <form action="">
+                <input type="text" placeholder="Your Message" class="w-[570px] h-[162px] bg-[#F3F3F3] rounded-lg ">
+              </form>
+              <button class="btn bg-[#B68C5A] text-font-poppins text-white font-semibold text-xl">Send Message</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-
+    <footer class="footer p-10 bg-black text-base-content max-w-screen-xl mx-auto">
+      <div>
+        <img src="./images/logo.png" alt="">
+        <p class="text-font-poppins text-gray-500">There are many variations of <br> passages of Lorem Ipsum <br> available, but the majority have <br> suffered alteration in some <br> form, by injected humour.</p>
+      </div> 
+      <div>
+        <span class="footer-title text-white text-2xl font-extrabold">Usefull Link</span> 
+        <a class="link link-hover text-gray-500">Homes</a> 
+        <a class="link link-hover text-gray-500">About Us</a> 
+        <a class="link link-hover text-gray-500">Cases</a> 
+        <a class="link link-hover text-gray-500">Blog</a>
+        <a class="link link-hover text-gray-500">Contact Us</a>
+      </div> 
+      <div>
+        <span class="footer-title text-white text-2xl font-extrabold">Contact Now</span> 
+        <a class="link link-hover text-gray-500">555 4th 5t NW, Washington <br>
+          DC 20530, United States</a> 
+        <a class="link link-hover text-gray-500">+88 01750 000 000 <br>
+          +88 01750 000 000</a> 
+        <a class="link link-hover text-gray-500">info@gmail.com <br>
+          info@gmail.com</a> 
+      </div> 
+      <div>
+        <span class="footer-title text-white text-2xl font-extrabold">Subscribe</span> 
+        <a class="link link-hover text-gray-500">Subscribe for our latest & <br> Articles. We Won’t Give You <br> Spam Mails</a> 
+        <div class="relative">
+          <input type="text" placeholder="Email Address" class="input input-bordered w-full pr-16" /> 
+          <button class="btn bg-[#B68C5A] absolute top-0 right-0 rounded-l-none"><img src="./images/Frame.svg" alt=""></button>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
